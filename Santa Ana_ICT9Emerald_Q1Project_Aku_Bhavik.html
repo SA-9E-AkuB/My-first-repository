@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 💙 My Creative Showcase 🏆 </title>
+    <link rel="icon" type="image/png" href="logo.png"> <!--Changes the icon in the browser tab-->
+    <link rel="stylesheet" href="styles_Q1Project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" alt="Student Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#about">💻 About Me</a></li>
+                <li><a href="#works">🎨 My Creations</a></li>
+                <li><a href="#contact">📧 Get in Touch</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="icon.png" alt="Profile Picture" class="profile-pic">
+        <h1>Hi, I’m <span class="highlight">Bhavik Aku</span></h1>
+        <p>🌟 Future Web Wizard</p>
+    </section>
+
+    <section id="about">
+        <h2 class="h2">About Me</h2>
+        <p>Hey! I’m Bhavik, a tech-loving student passionate about web development. I enjoy building simple yet creative websites, and in my free time, I experiment with new coding tricks and design tools 🌀.</p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/efWyiiy7nyg?si=eKmAX5GM_ctmdV4G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <p style="font-style: italic;">SORRY MA'AM, I DELTED IT ALREADY 😔😔🙇🏻‍♂️</p>
+    </section>
+
+    <section id="works">
+        <h2 class="h2">My Creations</h2>
+        <div class="works-gallery">
+
+            <div class="work-item">
+                <a href="https://tinyurl.com/Q1Drill1Sample" target="blank">
+                <img src="Work1.png" alt="Sample Work" style="border: 2px dashed black;">
+                </a>
+                <p style="text-align: center" class="formtitle"> 🎵 Music Recommendations</p>
+            </div>
+            <div class="work-item">
+                <ul>
+                    <li>✔ HTML & CSS Projects</li>
+                    <li>✔ Basic CSS magic</li>
+                    <li>✔ Interactive input elements</li>
+                </ul>
+            </div>
+
+            <div class="work-item">
+                <a href="https://tinyurl.com/ICT9Q1SW1Sample" target="blank">
+                <img src="Work2.png" alt="Sample Work" style="border: 2px dashed black;">
+                </a>
+                <p style="text-align: center;" class="formtitle">🎬 My Top 3 Favorite Films</p>
+            </div>
+            <div class="work-item">
+                <ul>
+                    <li>✔ Creative Web Projectss</li>
+                    <li>✔ Interactive HTML Forms</li>
+                    <li>✔ Fun with Lists, Links & Images</li>
+                </ul>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <section id="contact">
+        <h2 class="h2">📩 Get in Touch</h2>
+        <div class="form-container">
+                <form>
+                <!-- Input Fields -->
+                <label class="formtitle" for="name">Your Kind Name:</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                <br>
+                <label class="formtitle" for="email">Your Email address:</label>
+                <input type="email" id="email" name="email" placeholder="jane_doe@gmail.com" required>
+
+                <br>
+                <!-- Radio -->
+                <label class="formtitle">How did you discover me?</label>
+                <div class="radio-group">
+                    <input type="radio" id="rate1" name="rating" value="1" required>
+                    <label for="rate1">Facebook ℹ️</label>
+
+                    <input type="radio" id="rate2" name="rating" value="2">
+                    <label for="rate2">Google🌐</label>
+
+                    <input type="radio" id="rate3" name="rating" value="3">
+                    <label for="rate3">Friends 👬</label>
+                </div>
+
+                <br>
+                <br>
+                    <!-- Checkbox -->
+                <label class="formtitle">Services you’re interested in:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="action" name="genre" value="Action">
+                    <label for="action">Building Cool Website 🏢</label>
+
+                    <input type="checkbox" id="comedy" name="genre" value="Comedy">
+                    <label for="comedy">Designing Graphics & Art 🎨</label>
+
+                    <input type="checkbox" id="drama" name="genre" value="Drama">
+                    <label for="drama">Robotics 🤖 </label>
+                </div>
+                <br>
+                <br>
+
+                <!-- Select -->
+                <label class="formtitle" for="platform"> How Would You Rate My Portfolio? 📈</label>
+                <select id="platform" name="platform" required>
+                    <option value="">--Pick Your Score!!! --</option>
+                    <option value="1">💧</option>
+                    <option value="2">💧💧</option>
+                    <option value="3">💧💧💧</option>
+                    <option value="4">💧💧💧💧</option>
+                    <option value="5">💧💧💧💧💧</option>
+                </select>
+                
+                <br>
+                <br>
+                <label class="formtitle" for="reason">Got any thoughts or tips? 💭</label>
+                <textarea id="reason" name="reason" rows="4" placeholder="feedback here..." required></textarea>
+                <br>
+
+                <!-- Submit -->
+                <button type="submit"> Send Feedback 📤</button>
+                </form>
+        </div>
+
+    </section>
+
+
+
+    <footer>
+        <p>&copy;2025 Bhavik Student. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,289 @@
+/* General Reset */
+body {
+    font-family: "Marcellus", serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(wallpaper.gif);
+    background-size: contain;
+    color: #d3eef2;
+}
+
+.h2 {
+    background-color:#8badc9;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #3a535e;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    transition: box-shadow 0.4s ease, transform 0.4s ease; /* smooth hover */
+}
+
+.navbar:hover {
+    box-shadow: 0 0 15px rgba(122, 143, 161, 0.8), 
+                0 0 30px rgba(122, 143, 161, 0.6);
+    transform: scale(1.01); /* tiny zoom for depth */
+
+}
+.navbar .logo {
+  height: 50px;        /* keep navbar normal size */
+  transform: scale(2.5);  /* visually enlarge logo */
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+  filter: drop-shadow(0 0 6px rgba(200, 230, 255, 0.9)) 
+          drop-shadow(0 0 12px rgba(150, 200, 255, 0.6));
+  transform-origin: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #97cbf0; /* light rainy blue glow */
+    text-shadow: 0 0 8px #97cbf0, 0 0 15px #7a8fa1;
+}
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #97cbf0; 
+  opacity: 85%;
+  padding: 40px;
+  background: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: box-shadow 0.4s ease, transform 0.4s ease; /* smooth hover effect */
+}
+
+.hero:hover {
+  box-shadow: 0 0 20px rgba(151, 203, 240, 0.8), 
+              0 0 40px rgba(151, 203, 240, 0.6);
+  transform: scale(1.02); /* small zoom-in for depth */
+
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* black overlay */
+}
+
+.hero * {
+  position: relative;
+  z-index: 1; /* keep text above the overlay */
+}
+
+.hero h1, 
+.hero p, 
+.profile-pic {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.highlight {
+    color: #bddcf2;
+    font-weight: bolder;
+    font-family: "Waterfall";
+    font-size: 75px;
+}
+
+/* About, Works, Contact Sections */
+#about, #works, #contact {
+  padding: 5px;
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(122, 143, 161, 0.85);
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: slideUp 1.5s ease-out;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* smooth effect */
+}
+
+#about:hover, #works:hover, #contact:hover {
+  box-shadow: 0 0 12px rgba(200, 230, 255, 0.9), 
+              0 0 20px rgba(150, 200, 255, 0.7);
+  transform: scale(1.05); /* slight pop effect */
+}
+
+/* Works */
+.works-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.work-item {
+    flex: 1 1 45%;
+    text-align: left;
+}
+
+.work-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.work-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+.form-container {
+    background-color: rgba(122, 143, 161, 0.9); /* light rainy blue */
+    padding: 30px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+    border-radius: 12px;
+}
+
+/* Wavy glowing border */
+.form-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 4px; /* thickness of border */
+    background: repeating-linear-gradient(
+        135deg,
+        #97cbf0,
+        #97cbf0 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Optional hover glow */
+.form-container:hover::before {
+    filter: drop-shadow(0 0 10px #97cbf0);
+}
+
+.form-container {
+    background-color: rgba(122, 143, 161, 0.9); /* light rainy blue */
+    padding: 30px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    /* Even wavy border on all sides */
+    border: 6px solid transparent;
+    border-image: repeating-linear-gradient(
+        135deg,
+        #97cbf0,
+        #97cbf0 10px,
+        transparent 10px,
+        transparent 20px
+    ) 30 round;
+    border-radius: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid white; /* white outline */
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #536b82; /* soft night blue */
+    color: #fff; /* text white for contrast */
+}
+
+/* When user clicks inside */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border: 2px solid #97cbf0; /* glowing light blue outline */
+    outline: none;
+    box-shadow: 0 0 6px #97cbf0; /* glow effect */
+}
+
+
+button {
+    margin-top: 20px;
+    background-color: #89a9c9; /* your preferred soft blue */
+    color: white;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3; /* darker blue on hover */
+    box-shadow: 0 0 15px #89a9c9, 0 0 30px #89a9c9; /* glowing with your blue */
+}
+
+/* Footer */
+footer {
+    background-color: #3a535e;
+    color: #97cbf0; /* shiny light blue text */
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    text-shadow: 0 0 6px #97cbf0, 0 0 12px #7a8fa1; /* glowing effect *
+}
+
+h2{
+    background-color: #A2AADB;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ================= Animations ================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spinIn {
+  from { transform: rotate(-360deg) scale(0); opacity: 0; }
+  to { transform: rotate(0) scale(1); opacity: 1; }
+}
